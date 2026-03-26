@@ -10,7 +10,7 @@ const SITE = {
   /* ---- YOUR IDENTITY ---- */
   name:       "Duc Nguyen",          // appears in nav, footer, page titles
   tagline:    "Engineer by training. Explorer by nature.",
-  email:      "ducminhnguyen@usf.edu",
+  email:      "ducminhnguyen@gmail.com",
   linkedin:   "https://www.linkedin.com/in/duc-nguyen-usf/",
   photo:      "assets/profile.jpg", // path to your profile photo
   photoAlt:   "Portrait of Your Name",
