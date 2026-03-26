@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-title="Projects">
+
+  <nav id="site-nav"></nav>
+
+
+  <main class="page-content">
+    <div class="container">
+
+      <div class="section">
+        <span class="label">My Work</span>
+        <h1>Projects</h1>
+        <p style="max-width:520px; color:var(--ink-muted); margin-top:0.5rem;">
+          A selection of engineering projects — from CNC machining and CAD design
+          to fabrication and analysis.
+        </p>
+      </div>
+
+
+      <!-- ======================================================
+        HOW TO ADD A NEW PROJECT CARD:
+        1. Copy one <a class="card"> block below
+        2. Paste it inside this .card-grid div
+        3. Update: href, image src, card-tag, card-title, card-excerpt, card-meta
+        4. Create the project page file (copy template-project.html)
+
+        TIP: Put newest projects at the TOP.
+      ====================================================== -->
+      <div class="card-grid">
+
+
+        <!-- PROJECT CARD — copy/paste this block to add more -->
+        <a class="card" href="projects/cnc-milling.html">
+          <img src="assets/projects/cnc-thumb.jpg" alt="CNC Milling" class="card-thumb" />
+          <!-- No image yet? Delete the <img> above and use this instead:
+          <div class="card-thumb-placeholder">⚙️</div> -->
+          <div class="card-body">
+            <div class="card-tag">CNC / Machining</div>
+            <div class="card-title">Precision CNC Milling of Aluminium Fixture</div>
+            <div class="card-excerpt">
+              Designed and machined a custom aluminium fixture for a university lab,
+              holding tolerances of ±0.05 mm throughout production.
+            </div>
+            <div class="card-meta">May 2025</div>
+          </div>
+        </a>
+
+
+        <a class="card" href="projects/cad-design.html">
+          <div class="card-thumb-placeholder">📐</div>
+          <div class="card-body">
+            <div class="card-tag">CAD / Design</div>
+            <div class="card-title">Parametric Bracket Design in SolidWorks</div>
+            <div class="card-excerpt">
+              Fully parametric assembly with stress analysis, reducing material usage
+              by 18% while maintaining structural requirements.
+            </div>
+            <div class="card-meta">January 2025</div>
+          </div>
+        </a>
+
+
+        <!-- ADD MORE PROJECT CARDS HERE -->
+
+
+      </div>
+    </div>
+  </main>
+
+
+  <footer id="site-footer"></footer>
+
+  <script src="config.js"></script>
+  <script src="components.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Page title is set automatically from config.js -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<!-- data-title = what appears in the browser tab before your name -->
+<body data-title="About" id="about-page">
+
+  <!-- NAV is injected here by components.js — don't add anything inside -->
+  <nav id="site-nav"></nav>
+
+
+  <main class="page-content">
+    <div class="container">
+
+
+      <!-- HERO: all content comes from config.js automatically -->
+      <div class="about-hero section">
+        <img id="about-photo" class="about-photo" src="" alt="" />
+
+        <div class="about-hero-text">
+          <span class="label">About Me</span>
+          <h1 id="about-name"></h1>
+          <p class="about-tagline" id="about-tagline"></p>
+          <div id="about-bio"></div>
+
+          <div class="btn-group">
+            <a id="btn-linkedin" href="#" target="_blank" class="btn btn-primary">↗ LinkedIn</a>
+            <a id="btn-email"    href="#"                 class="btn btn-outline">✉ Email Me</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- SKILLS: tags come from config.js -->
+      <div class="section">
+        <span class="label">Skills &amp; Interests</span>
+        <h2>What I work with</h2>
+        <div class="tags" id="about-tags"></div>
+      </div>
+
+
+      <!-- RESUMES: cards injected from config.js -->
+      <div class="section">
+        <span class="label">Résumés</span>
+        <h2>Download my CV</h2>
+        <p style="color:var(--ink-muted); margin-bottom:1.5rem; font-size:0.95rem;">
+          I keep separate CVs tailored to different roles. Pick the one that fits.
+        </p>
+        <div id="resume-list"></div>
+      </div>
+
+
+      <!-- CURRENTLY: items come from config.js -->
+      <div class="section">
+        <span class="label">Currently</span>
+        <h2>What I'm up to</h2>
+        <ul id="about-currently" style="margin-left:1.5rem; margin-top:0.5rem;"></ul>
+      </div>
+
+
+      <!-- CONTACT: email comes from config.js -->
+      <div class="section">
+        <span class="label">Say Hello</span>
+        <h2>Get in touch</h2>
+        <p>
+          I'm always happy to talk about engineering, travel, or whatever
+          sparked your curiosity. Drop me a line at
+          <a id="contact-email" href="#"></a>.
+        </p>
+      </div>
+
+
+    </div>
+  </main>
+
+
+  <!-- FOOTER is injected here by components.js -->
+  <footer id="site-footer"></footer>
+
+  <!-- Order matters: config first, then components -->
+  <script src="config.js"></script>
+  <script src="components.js"></script>
+</body>
+</html>

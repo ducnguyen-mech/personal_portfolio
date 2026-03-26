@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-title="Blog">
+
+  <nav id="site-nav"></nav>
+
+
+  <main class="page-content">
+    <div class="container">
+
+      <div class="section">
+        <span class="label">Writing</span>
+        <h1>Blog</h1>
+        <p style="max-width:520px; color:var(--ink-muted); margin-top:0.5rem;">
+          Dispatches from the road, things I've been thinking about,
+          and the occasional deep dive into something that caught my attention.
+        </p>
+      </div>
+
+
+      <!-- ======================================================
+        HOW TO ADD A NEW BLOG POST CARD:
+        1. Copy one <a class="card"> block below
+        2. Paste it at the TOP of this .card-grid div (newest first)
+        3. Update: href, emoji/image, card-tag, card-title, card-excerpt, card-meta
+        4. Create the post file (copy blog/template-post.html)
+      ====================================================== -->
+      <div class="card-grid">
+
+
+        <!-- BLOG POST CARD — copy/paste this block to add more -->
+        <a class="card" href="blog/tokyo-trip.html">
+          <!-- Swap the emoji for an image when you have one:
+          <img src="assets/blog/tokyo-thumb.jpg" alt="Tokyo" class="card-thumb" /> -->
+          <div class="card-thumb-placeholder">🗼</div>
+          <div class="card-body">
+            <div class="card-tag">Travel</div>
+            <div class="card-title">Three Weeks in Tokyo: What I Didn't Expect</div>
+            <div class="card-excerpt">
+              I went for the ramen and the transit system. I stayed for everything else —
+              a city that rewards curiosity at every corner.
+            </div>
+            <div class="card-meta">March 2025 &nbsp;·&nbsp; 8 min read</div>
+          </div>
+        </a>
+
+
+        <a class="card" href="blog/coffee-notes.html">
+          <div class="card-thumb-placeholder">☕</div>
+          <div class="card-body">
+            <div class="card-tag">Food &amp; Culture</div>
+            <div class="card-title">Notes on Coffee: From Kyoto to Lisbon</div>
+            <div class="card-excerpt">
+              A running log of the best cups I've had while travelling,
+              and what the coffee culture of a city says about the people in it.
+            </div>
+            <div class="card-meta">January 2025 &nbsp;·&nbsp; 5 min read</div>
+          </div>
+        </a>
+
+
+        <!-- ADD MORE POST CARDS HERE (newest at top) -->
+
+
+      </div>
+    </div>
+  </main>
+
+
+  <footer id="site-footer"></footer>
+
+  <script src="config.js"></script>
+  <script src="components.js"></script>
+</body>
+</html>

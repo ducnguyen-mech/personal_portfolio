@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<!-- CHANGE: data-title → "Post Title — Your Name" in the browser tab -->
+<body data-title="Post Title Here">
+
+  <nav id="site-nav"></nav>
+
+  <main class="page-content">
+    <div class="container">
+
+      <div style="padding-top:2.5rem;">
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+      </div>
+
+      <!-- CHANGE: post header -->
+      <div class="post-header">
+        <!-- CHANGE: e.g. Travel, Food, Engineering, Thoughts -->
+        <span class="label">Category</span>
+        <h1>Your Post Title Here</h1>
+        <div class="post-meta">
+          <span>📅 Month Year</span>
+          <!-- Rough guide: 200 words ≈ 1 min read -->
+          <span>⏱ X min read</span>
+        </div>
+      </div>
+
+      <!-- WRITE YOUR POST BELOW
+           <p>   → paragraph
+           <h2>  → new section
+           <h3>  → sub-section
+           image → see pattern below
+           callout box → see pattern below
+      -->
+      <div class="prose">
+
+        <p>
+          Your opening paragraph. Start with something concrete — a moment,
+          a place, a question. Don't start with "In this post I will..."
+        </p>
+
+        <p>Keep writing...</p>
+
+        <!-- Optional image -->
+        <!--
+        <img src="../assets/blog/YOUR-IMAGE.jpg" alt="Describe the image" class="post-image" />
+        <p class="caption">Caption text here.</p>
+        -->
+
+        <h2>Section Heading</h2>
+        <p>Write your section content here.</p>
+
+        <!-- Optional callout box -->
+        <!--
+        <div class="callout">
+          💡 A tip, note, or thing worth highlighting.
+        </div>
+        -->
+
+        <h2>Another Section</h2>
+        <p>Keep writing. No length requirement — write as much as the topic deserves.</p>
+
+      </div><!-- end .prose -->
+
+      <!-- Prev/Next navigation — update links once you have adjacent posts -->
+      <div style="margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border); display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+        <a href="previous-post.html" class="btn btn-outline">← Previous Post</a>
+        <a href="next-post.html"     class="btn btn-outline">Next Post →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../config.js"></script>
+  <script src="../components.js"></script>
+</body>
+</html>

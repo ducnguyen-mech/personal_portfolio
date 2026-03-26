@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CHANGE: this sets the browser tab text -->
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+</head>
+<!-- CHANGE: data-title sets the browser tab → "CNC Milling — Your Name" -->
+<body data-title="CNC Milling Fixture">
+
+  <nav id="site-nav"></nav>
+
+
+  <main class="page-content">
+    <div class="container">
+
+      <div style="padding-top:2.5rem;">
+        <a href="../projects.html" class="back-link">← Back to Projects</a>
+      </div>
+
+      <!-- ======================================================
+        PROJECT HEADER — CHANGE these 4 things
+      ====================================================== -->
+      <div class="post-header">
+        <span class="label">CNC / Machining</span>
+        <h1>Precision CNC Milling of Aluminium Fixture</h1>
+        <div class="post-meta">
+          <span>📅 May 2025</span>
+          <span>🏫 University Capstone Project</span>
+          <span>🛠 Haas VF-2, SolidWorks, Mastercam</span>
+        </div>
+      </div>
+
+
+      <!-- ======================================================
+        PROJECT BODY — write your content below
+        
+        ELEMENTS YOU CAN USE:
+        
+        Paragraph:      <p>Your text here.</p>
+        Section title:  <h2>Title</h2>
+        Sub-title:      <h3>Sub-title</h3>
+        Bullet list:    <ul><li>Item</li></ul>
+        Callout box:    <div class="callout">💡 Note here.</div>
+        
+        Image:
+          <img src="../assets/projects/IMAGE.jpg" alt="Description" class="post-image" />
+          <p class="caption">Figure 1 — Caption here.</p>
+        
+        Table: see example below.
+        Chart: see example below (delete if not needed).
+      ====================================================== -->
+      <div class="prose">
+
+        <h2>Overview</h2>
+        <p>
+          This project involved the design and manufacture of a precision aluminium
+          fixture used to hold a sensor array during calibration. The primary challenge
+          was achieving tight positional tolerances across multiple datum surfaces while
+          working with the Haas VF-2 vertical mill available in the university machine shop.
+        </p>
+
+        <div class="callout">
+          💡 <strong>Key outcome:</strong> Final part held all critical tolerances within ±0.05 mm,
+          verified by CMM inspection.
+        </div>
+
+        <img src="../assets/projects/cnc-setup.jpg" alt="CNC machine setup" class="post-image" />
+        <p class="caption">Figure 1 — Machine setup before first operation.</p>
+
+
+        <h2>Design Process</h2>
+        <p>
+          The fixture was modelled in SolidWorks using a top-down design approach.
+          All mounting holes were defined relative to a single primary datum to simplify
+          the GD&T scheme and reduce cumulative error during machining.
+        </p>
+
+        <h3>Material Selection</h3>
+        <p>
+          6061-T6 aluminium was selected for its machinability, corrosion resistance,
+          and sufficient stiffness. The table below summarises key material properties.
+        </p>
+
+        <!-- TABLE: add/remove rows freely -->
+        <table class="data-table">
+          <thead>
+            <tr><th>Property</th><th>Value</th><th>Unit</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Yield Strength</td><td>276</td><td>MPa</td></tr>
+            <tr><td>Young's Modulus</td><td>68.9</td><td>GPa</td></tr>
+            <tr><td>Density</td><td>2.70</td><td>g/cm³</td></tr>
+            <tr><td>Thermal Conductivity</td><td>167</td><td>W/m·K</td></tr>
+          </tbody>
+        </table>
+
+
+        <h2>Manufacturing</h2>
+        <p>
+          Toolpaths were generated in Mastercam. A three-operation sequence was used:
+          roughing, semi-finishing, and a final finishing pass at 0.1mm step-over
+          to achieve Ra 1.6 μm on datum faces.
+        </p>
+
+
+        <h2>Inspection Results</h2>
+        <p>CMM inspection on 8 critical features. All passed the ±0.05 mm requirement.</p>
+
+        <!-- CHART: delete this whole block if you don't need a graph -->
+        <div style="margin:1.5rem 0; max-width:600px;">
+          <canvas id="myChart"></canvas>
+        </div>
+        <p class="caption">Figure 2 — CMM measured deviation from nominal (mm).</p>
+
+        <script>
+          // CHANGE: update labels and values to your data
+          new Chart(document.getElementById('myChart'), {
+            type: 'bar',
+            data: {
+              labels: ['Hole A','Hole B','Slot C','Face D','Face E','Pin F','Slot G','Bore H'],
+              datasets: [{
+                label: 'Deviation (mm)',
+                data: [0.012, -0.018, 0.031, 0.008, -0.025, 0.041, -0.019, 0.022],
+                backgroundColor: '#b5622a',
+                borderRadius: 4,
+              }]
+            },
+            options: {
+              plugins: { legend: { display: false } },
+              scales: {
+                y: { min: -0.06, max: 0.06, title: { display: true, text: 'Deviation (mm)' }, grid: { color: 'rgba(0,0,0,0.06)' } },
+                x: { grid: { display: false } }
+              }
+            }
+          });
+        </script>
+
+
+        <h2>Conclusions</h2>
+        <p>
+          All 8 inspected features passed tolerance. Surface finish Ra 1.4 μm
+          achieved against a target of Ra 1.6 μm. Total machining time: 3.5 hours.
+        </p>
+        <ul>
+          <li>All critical tolerances met (±0.05 mm)</li>
+          <li>Surface finish Ra 1.4 μm (target: Ra 1.6 μm)</li>
+          <li>Completed within material budget</li>
+        </ul>
+
+      </div><!-- end .prose -->
+
+
+      <!-- Prev/Next navigation between projects — update hrefs -->
+      <div style="margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border); display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+        <span></span>
+        <a href="cad-design.html" class="btn btn-outline">Next Project →</a>
+      </div>
+
+    </div>
+  </main>
+
+
+  <footer id="site-footer"></footer>
+
+  <!-- Note the ../ prefix — we're inside the projects/ subfolder -->
+  <script src="../config.js"></script>
+  <script src="../components.js"></script>
+</body>
+</html>

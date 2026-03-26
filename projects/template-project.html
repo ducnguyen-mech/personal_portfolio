@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style.css" />
+  <!-- Remove the line below if you don't need a chart -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+</head>
+<!-- CHANGE: data-title → appears as "Your Title — Your Name" in the browser tab -->
+<body data-title="Project Title Here">
+
+  <nav id="site-nav"></nav>
+
+  <main class="page-content">
+    <div class="container">
+
+      <div style="padding-top:2.5rem;">
+        <a href="../projects.html" class="back-link">← Back to Projects</a>
+      </div>
+
+      <!-- CHANGE: header info -->
+      <div class="post-header">
+        <span class="label">Category Here</span>
+        <h1>Your Project Title</h1>
+        <div class="post-meta">
+          <span>📅 Month Year</span>
+          <span>🏫 Context (university / personal / work)</span>
+          <span>🛠 Tools used</span>
+        </div>
+      </div>
+
+      <div class="prose">
+
+        <h2>Overview</h2>
+        <p>What is this project? What problem does it solve? Write 1–3 sentences.</p>
+
+        <!-- Optional highlight box -->
+        <div class="callout">
+          💡 <strong>Key result:</strong> Your main achievement in one sentence.
+        </div>
+
+        <!-- Image (delete if no image yet) -->
+        <img src="../assets/projects/YOUR-IMAGE.jpg" alt="Describe the image" class="post-image" />
+        <p class="caption">Figure 1 — Your caption here.</p>
+
+
+        <h2>Section Title</h2>
+        <p>Write your content. Add as many sections as needed.</p>
+
+        <h3>Sub-section (optional)</h3>
+        <p>More detail here.</p>
+
+
+        <!-- Table (delete if not needed) -->
+        <table class="data-table">
+          <thead>
+            <tr><th>Parameter</th><th>Value</th><th>Unit / Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Row label</td><td>Value</td><td>Unit</td></tr>
+            <tr><td>Row label</td><td>Value</td><td>Unit</td></tr>
+            <tr><td>Row label</td><td>Value</td><td>Unit</td></tr>
+          </tbody>
+        </table>
+
+
+        <!-- Chart (delete this whole block if not needed) -->
+        <h2>Results</h2>
+        <p>Describe what the chart is showing.</p>
+        <div style="margin:1.5rem 0; max-width:600px;">
+          <canvas id="myChart"></canvas>
+        </div>
+        <p class="caption">Figure 2 — Chart caption.</p>
+        <script>
+          // CHANGE: labels and data to your values
+          // type options: 'bar', 'line', 'pie'
+          new Chart(document.getElementById('myChart'), {
+            type: 'bar',
+            data: {
+              labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4'],
+              datasets: [{
+                label: 'Your data label',
+                data: [10, 25, 18, 30],
+                backgroundColor: '#b5622a',
+                borderRadius: 4,
+              }]
+            },
+            options: {
+              plugins: { legend: { display: false } },
+              scales: {
+                y: { grid: { color: 'rgba(0,0,0,0.06)' } },
+                x: { grid: { display: false } }
+              }
+            }
+          });
+        </script>
+
+
+        <h2>Conclusions</h2>
+        <p>What did you learn? What was the outcome?</p>
+        <ul>
+          <li>Key takeaway 1</li>
+          <li>Key takeaway 2</li>
+          <li>Key takeaway 3</li>
+        </ul>
+
+      </div><!-- end .prose -->
+
+      <!-- Prev/Next — update hrefs once you have adjacent projects -->
+      <div style="margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border); display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+        <a href="previous-project.html" class="btn btn-outline">← Previous</a>
+        <a href="next-project.html"     class="btn btn-outline">Next →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../config.js"></script>
+  <script src="../components.js"></script>
+</body>
+</html>
