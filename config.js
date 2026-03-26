@@ -8,10 +8,10 @@
 const SITE = {
 
   /* ---- YOUR IDENTITY ---- */
-  name:       "Your Name",          // appears in nav, footer, page titles
+  name:       "Duc Nguyen",          // appears in nav, footer, page titles
   tagline:    "Engineer by training. Explorer by nature.",
-  email:      "your@email.com",
-  linkedin:   "https://www.linkedin.com/in/yourname",
+  email:      "ducminhnguyen@usf.edu",
+  linkedin:   "https://www.linkedin.com/in/duc-nguyen-usf/",
   photo:      "assets/profile.jpg", // path to your profile photo
   photoAlt:   "Portrait of Your Name",
 
